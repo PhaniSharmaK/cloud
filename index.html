@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cloud Computing</title>
+</head>
+<body>
+<h1>Cloud Computing Week-1</h1>
+<div id="q1">	
+	        <h3>QUESTION 1: <br>Which of the following fall(s) under the “essential characteristics” of cloud computing?</h2>
+			<input type="checkbox" name="q1" value="a"> A. Resource Pooling</input><br>
+			<input type="checkbox" name="q1" value="b"> B. Measured Service</input><br>
+			<input type="checkbox" name="q1" value="c"> C. Rapid Elasticity</input><br>
+			<input type="checkbox" name="q1" value="d"> D. Latency</input><br>
+</div>
+<div id="q2">	
+	        <h3>QUESTION 2: <br>Which of the following is/are public cloud platform(s)?</h2>
+			<input type="checkbox" name="q2" value="a"> A. Windows Server Hyper-V</input><br>
+			<input type="checkbox" name="q2" value="b"> B. Google Cloud Interconnect</input><br>
+			<input type="checkbox" name="q2" value="c"> C. Amazon Virtual Private Cloud</input><br>
+			<input type="checkbox" name="q2" value="d"> D. Microsoft Azure</input><br>
+</div>
+<div id="q3">	
+	        <h3>QUESTION 3: <br>VM technology allows multiple virtual machines to run on a single physical system.</h2>
+			<input type="checkbox" name="q3" value="a"> A. True</input><br>
+			<input type="checkbox" name="q3" value="b"> B. False</input><br>
+</div>
+<div id="q4">	
+	        <h3>QUESTION 4: <br>Which one of the following is/are disadvantage(s) of cloud computing?</h2>
+			<input type="checkbox" name="q4" value="a"> A. Resource pooling</input><br>
+			<input type="checkbox" name="q4" value="b"> B. It requires an always-on internet connection.</input><br>
+			<input type="checkbox" name="q4" value="c"> C. Ubiquitous</input><br>
+			<input type="checkbox" name="q4" value="d"> D. On-demand payment policy</input><br>
+</div>
+<div id="q5">	
+	        <h3>QUESTION 5:<br>For less data-intensive applications, horizontal scale-out elasticity is the ideal solution.</h2>
+			<input type="checkbox" name="q5" value="a"> A. True</input><br>
+			<input type="checkbox" name="q5" value="b"> B. False</input><br>
+</div>
+<div id="q6">	
+	        <h3>QUESTION 6: <br>The combination of Service-Oriented Infrastructure and Cloud Computing realizes to ________.</h2>
+			<input type="checkbox" name="q6" value="a"> A. FTP</input><br>
+			<input type="checkbox" name="q6" value="b"> B. SNTP</input><br>
+			<input type="checkbox" name="q6" value="c"> C. XaaS</input><br>
+			<input type="checkbox" name="q6" value="d"> D. FaaS</input><br>
+</div>
+<div id="q7">	
+	        <h3>QUESTION 7: <br>What is/are the main requirement(s) of a Cloud Service Provider (CSP)?</h2>
+			<input type="checkbox" name="q7" value="a"> A. Increase agility</input><br>
+			<input type="checkbox" name="q7" value="b"> B. Increase cost</input><br>
+			<input type="checkbox" name="q7" value="c"> C. Increase productivity</input><br>
+			<input type="checkbox" name="q7" value="d"> D. Decrease cost</input><br>
+</div>
+<div id="q8">	
+	        <h3>QUESTION 8:<br>PaaS (Platform as a Service) brings the benefits: <br>(i) Creation of software <br>(ii)Integration of web services and databases</h2>
+			<input type="checkbox" name="q8" value="a"> A. Only (i)</input><br>
+			<input type="checkbox" name="q8" value="b"> B. Only (ii)</input><br>
+			<input type="checkbox" name="q8" value="c"> C. Both (i) and (ii)</input><br>
+			<input type="checkbox" name="q8" value="d"> D. Neither (i) nor (ii)</input><br>
+</div>
+<div id="q9">	
+	        <h3>QUESTION 9: <br>A __________ is a distributed computer system that consists of a collection of interconnected stand-alone computers working together as an integrated computing resource.</h2>
+			<input type="checkbox" name="q9" value="a"> A. Grid</input><br>
+			<input type="checkbox" name="q9" value="b"> B. Cluster</input><br>
+			<input type="checkbox" name="q9" value="c"> C. Cloud</input><br>
+			<input type="checkbox" name="q9" value="d"> D. Node</input><br>
+</div>
+<div id="q10">	
+    <h3>QUESTION 10:<br>“Google Slide” is an example of</h2>
+    <input type="checkbox" name="q10" value="a"> A. PaaS</input><br>
+    <input type="checkbox" name="q10" value="b"> B. IaaS</input><br>
+    <input type="checkbox" name="q10" value="c"> C. SaaS</input><br>
+    <input type="checkbox" name="q10" value="d"> D. FaaS</input><br>
+</div>
+<br>
+<button name="submit" onclick="submit()" >Submit</button>
+<p id="scr">Score:</p>
+    <script type="text/javascript">
+    	function submit(){
+            key={
+                q1_ans:"a,b,c",
+                q2_ans:"b,d",
+                q3_ans:"a",
+                q4_ans:"b",
+                q5_ans:"b",
+                q6_ans:"c",
+                q7_ans:"a,c",
+                q8_ans:"c",
+                q9_ans:"b",
+                q10_ans:"c"
+            }
+            let score=0
+    		var q1 = document.getElementsByName("q1");
+    		var q1_ans = [];
+    		for(var i=0;i<q1.length;i++){
+    			if(q1[i].checked){
+    				q1_ans.push(q1[i].value);
+    			}
+    		}
+    		if(q1_ans.includes("a") && q1_ans.includes("b") && q1_ans.includes("c") && q1_ans.length == 3){
+    			score+=1
+                document.getElementById("q1").style.backgroundColor = "green";
+    		}
+    		else{
+    			document.getElementById("q1").style.backgroundColor = "red";
+    		}
+            var q2 = document.getElementsByName("q2");
+    		var q2_ans = [];
+    		for(var i=0;i<q2.length;i++){
+    			if(q2[i].checked){
+    				q2_ans.push(q2[i].value);
+    			}
+    		}
+    		if(q2_ans.includes("b") && q2_ans.includes("d") && q2_ans.length == 2){
+    			score+=1
+                document.getElementById("q2").style.backgroundColor = "green";
+    		}
+    		else{
+    			document.getElementById("q2").style.backgroundColor = "red";
+    		}
+    		var q3 = document.getElementsByName("q3");
+    		var q3_ans = [];
+    		for(var i=0;i<q3.length;i++){
+    			if(q3[i].checked){
+    				q3_ans.push(q3[i].value);
+    			}
+    		}
+    		if(q3_ans.includes("a") && q3_ans.length == 1){
+    			score+=1
+                document.getElementById("q3").style.backgroundColor = "green";
+    		}
+    		else{
+    			document.getElementById("q3").style.backgroundColor = "red";
+    		}
+    		var q4 = document.getElementsByName("q4");
+    		var q4_ans = [];
+    		for(var i=0;i<q4.length;i++){
+    			if(q4[i].checked){
+    				q4_ans.push(q4[i].value);
+    			}
+    		}
+    		if(q4_ans.includes("b") && q4_ans.length == 1){
+    			score+=1
+                document.getElementById("q4").style.backgroundColor = "green";
+    		}
+    		else{
+    			document.getElementById("q4").style.backgroundColor = "red";
+    		}
+    		var q5 = document.getElementsByName("q5");
+    		var q5_ans = [];
+    		for(var i=0;i<q5.length;i++){
+    			if(q5[i].checked){
+    				q5_ans.push(q5[i].value);
+    			}
+    		}
+    		if(q5_ans.includes("b") && q5_ans.length == 1){
+    			score+=1
+                document.getElementById("q5").style.backgroundColor = "green";
+    		}
+    		else{
+    			document.getElementById("q5").style.backgroundColor = "red";
+    		}
+    		var q6 = document.getElementsByName("q6");
+    		var q6_ans = [];
+    		for(var i=0;i<q6.length;i++){
+    			if(q6[i].checked){
+    				q6_ans.push(q6[i].value);
+    			}
+    		}
+    		if(q6_ans.includes("c") && q6_ans.length == 1){
+    			score+=1
+                document.getElementById("q6").style.backgroundColor = "green";
+    		}
+    		else{
+    			document.getElementById("q6").style.backgroundColor = "red";
+    		}
+    		var q7 = document.getElementsByName("q7");
+    		var q7_ans =[];
+            for(var i=0;i<q7.length;i++){
+    			if(q7[i].checked){
+    				q7_ans.push(q7[i].value);
+    			}
+    		}
+    		if(q7_ans.includes("a") && q7_ans.includes("c") && q7_ans.length == 2){
+    			score+=1
+                document.getElementById("q7").style.backgroundColor = "green";
+    		}
+    		else{
+    			document.getElementById("q7").style.backgroundColor = "red";
+    		}
+    		
+    		var q8 = document.getElementsByName("q8");
+    		var q8_ans = [];
+    		for(var i=0;i<q8.length;i++){
+    			if(q8[i].checked){
+    				q8_ans.push(q8[i].value);
+    			}
+    		}
+    		if(q8_ans.includes("c") && q8_ans.length == 1){
+    			score+=1
+                document.getElementById("q8").style.backgroundColor = "green";
+    		}
+    		else{
+    			document.getElementById("q8").style.backgroundColor = "red";
+    		}
+    		var q9 = document.getElementsByName("q9");
+    		var q9_ans = [];
+    		for(var i=0;i<q9.length;i++){
+    			if(q9[i].checked){
+    				q9_ans.push(q9[i].value);
+    			}
+    		}
+    		if(q9_ans.includes("b") && q9_ans.length == 1){
+    			score+=1
+                document.getElementById("q9").style.backgroundColor = "green";
+    		}
+    		else{
+    			document.getElementById("q9").style.backgroundColor = "red";
+    		}
+    		var q10 = document.getElementsByName("q10");
+    		var q10_ans = [];
+    		for(var i=0;i<q10.length;i++){
+    			if(q10[i].checked){
+    				q10_ans.push(q10[i].value);
+    			}
+    		}
+    		if(q10_ans.includes("c") && q10_ans.length == 1){
+    			score+=1
+                document.getElementById("q10").style.backgroundColor = "green";
+    		}
+    		else{
+    			document.getElementById("q10").style.backgroundColor = "red";
+    		}
+            document.getElementById("scr").innerHTML = "Score:" + score + "/10";
+    	}
+    </script>
+</body>
+</html>
